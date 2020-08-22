@@ -5,6 +5,7 @@
   --ptimary-blue-color: #2196f3;
   --secondary-bg-color: #f5f4fa;
   --footer-bg-color: #2f303a;
+  --social-color-icons: #afb1b8;
 }
 body {
   background-color: var(--accent-color);
@@ -258,7 +259,39 @@ li {
   flex-direction: column;
   align-items: center;
 }
+.social {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 30px;
+}
+.social-item:not(:last-child) {
+  margin-right: 10px;
+}
+.social-icon {
+  fill: var(--social-color-icons);
+}
+.social-link {
+  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--ptimary-blue-color);
+  color: var(--accent-color);
+  transition: 300ms linear;
+}
+.social-link:hover svg {
+  fill: var(--accent-color);
+}
 .social-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   width: 44px;
   height: 44px;
@@ -288,15 +321,10 @@ li {
   font-weight: 500;
   text-align: center;
 }
-.social {
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 30px;
-}
-.team .line {
+/* .team .line {
   display: inline-block;
   margin-bottom: 30px;
-}
+} */
 /* CLIENTS */
 .clients-section {
   padding-bottom: 94px;
